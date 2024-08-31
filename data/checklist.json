@@ -5,7 +5,75 @@
             "completed": false,
             "urgent": true,
             "important": true
+        },
+        "2": {
+            "task": "derecho de petición boita",
+            "completed": false
+        },
+        "3": {
+            "task": "pago status migración",
+            "completed": false
+        },
+        "4": {
+            "task": "enviar correo migración javeriana",
+            "completed": false
+        },
+        "5": {
+            "task": "notas javeriana consolidado",
+            "completed": false
+        },
+        "6": {
+            "task": "coopebis formato",
+            "completed": false
+        },
+        "7": {
+            "task": "auto cotizar americana",
+            "completed": false
+        },
+        "8": {
+            "task": "crear matriz de prioridades",
+            "completed": false
+        },
+        "9": {
+            "task": "desinfectar cascos",
+            "completed": false
+        },
+        "10": {
+            "task": "cotizar skincare",
+            "completed": false
+        },
+        "11": {
+            "task": "cuadrar reunión Diego sábado",
+            "completed": false
+        },
+        "12": {
+            "task": "clases compensar",
+            "completed": false
+        },
+        "13": {
+            "task": "Buscar carnet javeriana",
+            "completed": false
+        },
+        "14": {
+            "task": "notas javeriana",
+            "completed": false
+        },
+        "15": {
+            "task": "nuevo parqueadero",
+            "completed": false
+        },
+        "16": {
+            "task": "lista invitados",
+            "completed": false
+        },
+        "17": {
+            "task": "actualizar teléfono conjunto",
+            "completed": false
+        },
+        "18": {
+            "task": "amoxicillina",
+            "completed": false
         }
     },
-    "next_id": 2
+    "next_id": 19
 }
