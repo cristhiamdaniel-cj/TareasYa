@@ -1,3 +1,17 @@
+<<<<<<< HEAD
 *.pyc
 __pycache__/
 .venv/
+=======
+# .gitignore
+
+# Ignorar archivos de Python
+__pycache__/
+*.pyc
+
+# Ignorar entornos virtuales
+.venv/
+
+# Ignorar archivos específicos
+data/checklist.json
+>>>>>>> 37d8a78dcd0b77e8b3e74df2f68c71904c7cace0
