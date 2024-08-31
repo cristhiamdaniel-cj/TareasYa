@@ -487,6 +487,14 @@ def save_checklist():
         logger.info("Checklist guardado en el archivo JSON")
 
 
+# Nueva función para eliminar tareas completadas
+def delete_completed_tasks():
+    global checklist
+    checklist = {task_id: info for task_id, info in checklist.items() if not info["completed"]}
+    save_checklist()
+    logger.info("Tareas completadas eliminadas del checklist")
+
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     logger.info("Comando /init ejecutado")
     await update.message.reply_text(
@@ -496,7 +504,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         '/undo [id] - Desmarca una tarea\n'
         '/list - Muestra el checklist\n'
         '/prio [id] [urgente] [importante] - Establece prioridad\n'
-        '/eisn - Muestra la matriz de Eisenhower'
+        '/eisn - Muestra la matriz de Eisenhower\n'
+        '/delete - Elimina todas las tareas completadas'
     )
 
 
@@ -614,6 +623,13 @@ async def show_eisenhower(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(response)
     logger.info("Comando /eisn ejecutado. Matriz de Eisenhower generada.")
+
+
+# Nueva función asincrónica para el comando /delete
+async def delete_tasks(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    delete_completed_tasks()
+    await update.message.reply_text("Todas las tareas completadas han sido eliminadas.")
+    logger.info("Comando /delete ejecutado. Tareas completadas eliminadas.")
 
 
 # Cargar el checklist cuando se inicia el módulo
