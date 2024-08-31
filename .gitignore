@@ -1,0 +1,11 @@
+# .gitignore
+
+# Ignorar archivos de Python
+__pycache__/
+*.pyc
+
+# Ignorar entornos virtuales
+.venv/
+
+# Ignorar archivos específicos
+data/checklist.json
