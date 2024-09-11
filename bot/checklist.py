@@ -509,22 +509,57 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
+# async def add_task(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     global next_id
+#     task = ' '.join(context.args)
+#     if not task:
+#         await update.message.reply_text('Por favor, especifica una tarea para agregar.')
+#         logger.warning("Comando /add ejecutado sin especificar una tarea")
+#     else:
+#         checklist[next_id] = {"task": task, "completed": False, "urgent": False, "important": False}
+#         await update.message.reply_text(f"Tarea '{task}' agregada con identificador {next_id}.")
+#         logger.info(f"Tarea '{task}' agregada con identificador {next_id}")
+#         next_id += 1
+#         save_checklist()
+
 async def add_task(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global next_id
-    task = ' '.join(context.args)
+    task = ' '.join(context.args)  # Juntamos todos los argumentos en una cadena
+
     if not task:
-        await update.message.reply_text('Por favor, especifica una tarea para agregar.')
+        await update.message.reply_text(
+            'Por favor, especifica una tarea para agregar.\n'
+            'Uso correcto: /add [tarea]\n'
+            'Ejemplo: /add Comprar leche'
+        )
         logger.warning("Comando /add ejecutado sin especificar una tarea")
     else:
         checklist[next_id] = {"task": task, "completed": False, "urgent": False, "important": False}
-        await update.message.reply_text(f"Tarea '{task}' agregada con identificador {next_id}.")
+        await update.message.reply_text(f"Tarea '{task}' agregada con el ID {next_id}.")
         logger.info(f"Tarea '{task}' agregada con identificador {next_id}")
         next_id += 1
         save_checklist()
 
 
+# async def mark_task(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     try:
+#         task_id = int(context.args[0])
+#         if task_id in checklist:
+#             checklist[task_id]["completed"] = True
+#             await update.message.reply_text(f"Tarea '{checklist[task_id]['task']}' marcada como completada.")
+#             logger.info(f"Tarea '{checklist[task_id]['task']}' marcada como completada con identificador {task_id}")
+#             save_checklist()
+#         else:
+#             await update.message.reply_text(f"No se encontró ninguna tarea con el identificador {task_id}.")
+#             logger.warning(f"No se encontró ninguna tarea con el identificador {task_id}")
+#     except (IndexError, ValueError):
+#         await update.message.reply_text('Por favor, proporciona un identificador de tarea válido.')
+#         logger.error("Identificador inválido proporcionado en comando /done")
+
+
 async def mark_task(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
+        # Comprobamos que el ID se haya proporcionado y sea un número entero
         task_id = int(context.args[0])
         if task_id in checklist:
             checklist[task_id]["completed"] = True
@@ -532,10 +567,15 @@ async def mark_task(update: Update, context: ContextTypes.DEFAULT_TYPE):
             logger.info(f"Tarea '{checklist[task_id]['task']}' marcada como completada con identificador {task_id}")
             save_checklist()
         else:
-            await update.message.reply_text(f"No se encontró ninguna tarea con el identificador {task_id}.")
-            logger.warning(f"No se encontró ninguna tarea con el identificador {task_id}")
+            await update.message.reply_text(f"No se encontró ninguna tarea con el ID {task_id}.")
+            logger.warning(f"No se encontró ninguna tarea con el ID {task_id}")
     except (IndexError, ValueError):
-        await update.message.reply_text('Por favor, proporciona un identificador de tarea válido.')
+        await update.message.reply_text(
+            'Uso incorrecto del comando /done. Ejemplo de uso:\n'
+            '/done [id]\n'
+            'Donde [id] es el número identificador de la tarea.\n'
+            'Ejemplo: /done 1'
+        )
         logger.error("Identificador inválido proporcionado en comando /done")
 
 
@@ -568,11 +608,33 @@ async def get_checklist(update: Update, context: ContextTypes.DEFAULT_TYPE):
         logger.info("Comando /list ejecutado. Estado actual:\n" + response)
 
 
+# async def set_priority(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     try:
+#         task_id = int(context.args[0])
+#         urgent = context.args[1].lower() == 'urgent'
+#         important = context.args[2].lower() == 'important'
+#
+#         if task_id in checklist:
+#             checklist[task_id]["urgent"] = urgent
+#             checklist[task_id]["important"] = important
+#             await update.message.reply_text(f"Prioridad de la tarea '{checklist[task_id]['task']}' actualizada.")
+#             logger.info(f"Prioridad de la tarea '{checklist[task_id]['task']}' actualizada.")
+#             save_checklist()
+#         else:
+#             await update.message.reply_text("No se encontró ninguna tarea con el identificador dado.")
+#     except (IndexError, ValueError):
+#         await update.message.reply_text('Por favor, proporciona un identificador de tarea válido y las prioridades.')
+#         logger.error("Comando /prio ejecutado con argumentos inválidos")
+
 async def set_priority(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
-        task_id = int(context.args[0])
-        urgent = context.args[1].lower() == 'urgent'
-        important = context.args[2].lower() == 'important'
+        # Verificamos que al menos haya tres argumentos: ID, urgent y important
+        if len(context.args) < 3:
+            raise ValueError("Faltan argumentos.")
+
+        task_id = int(context.args[0])  # Intentamos convertir el primer argumento en un entero (ID de la tarea)
+        urgent = context.args[1].lower() == 'urgent'  # El segundo argumento debe ser 'urgent'
+        important = context.args[2].lower() == 'important'  # El tercer argumento debe ser 'important'
 
         if task_id in checklist:
             checklist[task_id]["urgent"] = urgent
@@ -581,9 +643,17 @@ async def set_priority(update: Update, context: ContextTypes.DEFAULT_TYPE):
             logger.info(f"Prioridad de la tarea '{checklist[task_id]['task']}' actualizada.")
             save_checklist()
         else:
-            await update.message.reply_text("No se encontró ninguna tarea con el identificador dado.")
+            await update.message.reply_text(f"No se encontró ninguna tarea con el ID {task_id}.")
     except (IndexError, ValueError):
-        await update.message.reply_text('Por favor, proporciona un identificador de tarea válido y las prioridades.')
+        await update.message.reply_text(
+            'Uso incorrecto del comando /prio. Ejemplo de uso:\n'
+            '/prio [id] urgent important\n'
+            'Donde:\n'
+            '- [id] es el ID de la tarea (un número entero).\n'
+            '- "urgent" indica si la tarea es urgente.\n'
+            '- "important" indica si la tarea es importante.\n'
+            'Ejemplo: /prio 1 urgent important'
+        )
         logger.error("Comando /prio ejecutado con argumentos inválidos")
 
 
