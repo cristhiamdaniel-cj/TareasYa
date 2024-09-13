@@ -13,3 +13,4 @@ __pycache__/
 
 # Ignorar archivos específicos
 data/checklist.json
+data/server_output.log
