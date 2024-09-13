@@ -1,0 +1,15 @@
+127.0.0.1 - - [31/Aug/2024 17:37:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [31/Aug/2024 17:37:46] code 404, message File not found
+127.0.0.1 - - [31/Aug/2024 17:37:46] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [31/Aug/2024 17:37:48] "GET /eisenhower_matrix.html HTTP/1.1" 200 -
+127.0.0.1 - - [31/Aug/2024 17:41:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [31/Aug/2024 17:41:30] code 404, message File not found
+127.0.0.1 - - [31/Aug/2024 17:41:30] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [31/Aug/2024 17:41:32] "GET /eisenhower_matrix.html HTTP/1.1" 200 -
+()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use

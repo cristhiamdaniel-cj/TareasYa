@@ -1,10 +1,44 @@
 
-    <html>
+    <!DOCTYPE html>
+    <html lang="es">
     <head>
+        <meta charset="UTF-8">
+        <title> Matriz de Eisenhower</title>
         <style>
-            table { width: 100%; border-collapse: collapse; }
-            th, td { border: 1px solid black; padding: 8px; text-align: center; }
-            th { background-color: #f2f2f2; }
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f9;
+                color: #333;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 12px;
+                text-align: center;
+            }
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            tr:hover {
+                background-color: #ddd;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            li::before {
+                content: "• ";
+                color: #4CAF50;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -15,16 +49,16 @@
                 <th>No Urgente pero Importante</th>
             </tr>
             <tr>
-                <td>No hay tareas en esta categoría.</td>
-                <td>No hay tareas en esta categoría.</td>
+                <td><ul><li>❌ notas javeriana consolidado</li><li>❌ tomar foto visa</li></ul></td>
+                <td><ul><li>❌ comparendo daniel</li><li>❌ coopebis formato</li><li>❌ Buscar carnet javeriana</li></ul></td>
             </tr>
             <tr>
                 <th>Urgente pero No Importante</th>
                 <th>No Urgente y No Importante</th>
             </tr>
             <tr>
-                <td>No hay tareas en esta categoría.</td>
-                <td><ul><li>❌ comparendo daniel</li><li>✅ derecho de petición boita</li><li>✅ pago status migración</li><li>✅ enviar correo migración javeriana</li><li>❌ notas javeriana consolidado</li><li>❌ coopebis formato</li><li>❌ auto cotizar americana</li><li>✅ crear matriz de prioridades</li><li>❌ desinfectar cascos</li><li>❌ cotizar skincare</li><li>✅ cuadrar reunión Diego sábado</li><li>✅ clases compensar</li><li>❌ Buscar carnet javeriana</li><li>✅ notas javeriana</li><li>❌ nuevo parqueadero</li><li>✅ lista invitados</li><li>❌ actualizar teléfono conjunto</li><li>✅ amoxicillina</li></ul></td>
+                <td><ul><li>❌ actualizar teléfono conjunto</li><li>❌ bajar zapatillas altillo</li></ul></td>
+                <td><ul><li>❌ auto cotizar americana</li><li>❌ desinfectar cascos</li></ul></td>
             </tr>
         </table>
     </body>

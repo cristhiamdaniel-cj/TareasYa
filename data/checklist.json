@@ -4,47 +4,23 @@
             "task": "comparendo daniel",
             "completed": false,
             "urgent": false,
-            "important": false
-        },
-        "2": {
-            "task": "derecho de petici\u00f3n boita",
-            "completed": true,
-            "urgent": false,
-            "important": false
-        },
-        "3": {
-            "task": "pago status migraci\u00f3n",
-            "completed": true,
-            "urgent": false,
-            "important": false
-        },
-        "4": {
-            "task": "enviar correo migraci\u00f3n javeriana",
-            "completed": true,
-            "urgent": false,
-            "important": false
+            "important": true
         },
         "5": {
             "task": "notas javeriana consolidado",
             "completed": false,
-            "urgent": false,
-            "important": false
+            "urgent": true,
+            "important": true
         },
         "6": {
             "task": "coopebis formato",
             "completed": false,
             "urgent": false,
-            "important": false
+            "important": true
         },
         "7": {
             "task": "auto cotizar americana",
             "completed": false,
-            "urgent": false,
-            "important": false
-        },
-        "8": {
-            "task": "crear matriz de prioridades",
-            "completed": true,
             "urgent": false,
             "important": false
         },
@@ -54,60 +30,66 @@
             "urgent": false,
             "important": false
         },
-        "10": {
-            "task": "cotizar skincare",
-            "completed": false,
-            "urgent": false,
-            "important": false
-        },
-        "11": {
-            "task": "cuadrar reuni\u00f3n Diego s\u00e1bado",
-            "completed": true,
-            "urgent": false,
-            "important": false
-        },
-        "12": {
-            "task": "clases compensar",
-            "completed": true,
-            "urgent": false,
-            "important": false
-        },
         "13": {
             "task": "Buscar carnet javeriana",
             "completed": false,
             "urgent": false,
-            "important": false
-        },
-        "14": {
-            "task": "notas javeriana",
-            "completed": true,
-            "urgent": false,
-            "important": false
-        },
-        "15": {
-            "task": "nuevo parqueadero",
-            "completed": false,
-            "urgent": false,
-            "important": false
-        },
-        "16": {
-            "task": "lista invitados",
-            "completed": true,
-            "urgent": false,
-            "important": false
+            "important": true
         },
         "17": {
             "task": "actualizar tel\u00e9fono conjunto",
             "completed": false,
+            "urgent": true,
+            "important": false
+        },
+        "23": {
+            "task": "bajar zapatillas altillo",
+            "completed": false,
+            "urgent": true,
+            "important": false
+        },
+        "26": {
+            "task": "cancelar 140 de la semana melina",
+            "completed": false,
             "urgent": false,
             "important": false
         },
-        "18": {
-            "task": "amoxicillina",
+        "27": {
+            "task": "cancelar 10 que faltan porras",
             "completed": true,
+            "urgent": false,
+            "important": false
+        },
+        "28": {
+            "task": "psic\u00f3loga martes 17",
+            "completed": false,
+            "urgent": false,
+            "important": false
+        },
+        "29": {
+            "task": "cuadrar clases futbol Nico",
+            "completed": false,
+            "urgent": false,
+            "important": false
+        },
+        "30": {
+            "task": "botas alza",
+            "completed": false,
+            "urgent": false,
+            "important": false
+        },
+        "31": {
+            "task": "celular arreglar.",
+            "completed": false,
+            "urgent": false,
+            "important": false
+        },
+        "32": {
+            "task": "cambiar visor moto",
+            "completed": false,
             "urgent": false,
             "important": false
         }
     },
-    "next_id": 19
+    "next_id": 33
 }

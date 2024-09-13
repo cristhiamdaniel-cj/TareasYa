@@ -1,7 +1,7 @@
 from telegram.ext import CommandHandler
 from bot.checklist import start, add_task, mark_task, unmark_task, get_checklist, set_priority, show_eisenhower, \
     delete_tasks
-from bot.reminders import set_reminder
+from bot.reminders import set_reminders
 
 # Funcion para configurar los manejadores de comandos
 def setup_handlers(application):
@@ -15,4 +15,4 @@ def setup_handlers(application):
     application.add_handler(CommandHandler("delete", delete_tasks))
 
     # Añadir recordatorio
-    set_reminder(application)
+    set_reminders(application)

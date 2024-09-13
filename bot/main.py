@@ -3,6 +3,8 @@ from telegram.ext import Application
 from bot.handlers import setup_handlers
 from bot.config import TOKEN
 from bot.reminders import scheduler
+from bot.reminders import set_reminders
+
 
 # Función para manejar los errores del bot
 async def error_handler(update, context):
@@ -24,6 +26,9 @@ def main():
 
     # Configurar los manejadores de comandos
     setup_handlers(application)
+
+    # Configurar los recordatorios
+    set_reminders(application)
 
     # Añadir manejador de errores
     application.add_error_handler(error_handler)

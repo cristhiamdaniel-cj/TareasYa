@@ -23,30 +23,36 @@ async def send_reminders(context):
             await context.bot.send_message(chat_id=user_id, text="¡No tienes tareas pendientes! 😃")
         logging.info(f"Recordatorio enviado al usuario {user_id}")
 
-# Función para programar el recordatorio diario
-def set_reminder(application):
+# Función para programar los recordatorios a las 10:00 AM, 3:00 PM y 8:00 PM
+def set_reminders(application):
     scheduler.add_job(
         send_reminders,
         'cron',
-        hour=17,  # Hora a la que deseas enviar el recordatorio
-        minute=21,  # Minuto a la que deseas enviar el recordatorio
+        hour=10,  # Programado para las 10:00 AM
+        minute=0,
         timezone=colombia_tz,
         args=[application]  # Pasar el contexto de la aplicación como argumento
     )
-    scheduler.start()  # Iniciar el scheduler
-    logging.info("Recordatorio diario programado a las 17:00 hora de Colombia")
-
-# Función para programar el recordatorio diario a las 9:00 AM
-def schedule_daily_reminder(application):
+    
     scheduler.add_job(
         send_reminders,
         'cron',
-        hour=9,
-        minute=0,  # Programado para las 9:00 AM
+        hour=15,  # Programado para las 3:00 PM
+        minute=0,
         timezone=colombia_tz,
-        args=[application]  # Pasar la aplicación completa como argumento
+        args=[application]  # Pasar el contexto de la aplicación como argumento
     )
-    scheduler.start()  # Iniciar el scheduler
-    logging.info("Recordatorio diario programado a las 9:00 AM hora de Colombia")
+    
+    scheduler.add_job(
+        send_reminders,
+        'cron',
+        hour=20,  # Programado para las 8:00 PM
+        minute=0,
+        timezone=colombia_tz,
+        args=[application]  # Pasar el contexto de la aplicación como argumento
+    )
+    
+    # scheduler.start()  # Iniciar el scheduler
+    logging.info("Recordatorios programados a las 10:00 AM, 3:00 PM y 8:00 PM hora de Colombia")
 
 
