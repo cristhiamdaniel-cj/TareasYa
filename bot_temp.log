@@ -1,0 +1,350 @@
+2024-09-23 14:20:00,178 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:20:00,178 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:20:00,178 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:20:00,178 - root - INFO - Recordatorios programados a las 10:00 AM, 3:00 PM y 8:00 PM hora de Colombia
+2024-09-23 14:20:00,178 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:20:00,179 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:20:00,179 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:20:00,179 - root - INFO - Recordatorios programados a las 10:00 AM, 3:00 PM y 8:00 PM hora de Colombia
+2024-09-23 14:20:00,179 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:20:00,180 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:20:00,180 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:20:00,180 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:20:00,180 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:20:00,180 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:20:00,180 - apscheduler.scheduler - INFO - Scheduler started
+2024-09-23 14:20:00,180 - __main__ - INFO - Scheduler iniciado
+2024-09-23 14:20:00,180 - __main__ - INFO - Bot iniciado
+2024-09-23 14:20:00,818 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getMe "HTTP/1.1 200 OK"
+2024-09-23 14:20:01,015 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/deleteWebhook "HTTP/1.1 200 OK"
+2024-09-23 14:20:01,018 - apscheduler.scheduler - INFO - Scheduler started
+2024-09-23 14:20:01,018 - telegram.ext.Application - INFO - Application started
+2024-09-23 14:20:11,629 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:20:21,833 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:20:32,036 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:20:42,230 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:20:42,417 - telegram.ext.Updater - ERROR - Error while getting Updates: httpx.ReadError: 
+2024-09-23 14:20:42,417 - root - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 377, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 216, in handle_async_request
+    raise exc from None
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 196, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 143, in handle_async_request
+    raise exc
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 113, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 186, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 224, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 276, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1585, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1674, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1702, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1739, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1776, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 376, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/ext/_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/ext/_updater.py", line 749, in do_action
+    return action_cb_task.result()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/ext/_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/ext/_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/_bot.py", line 4364, in get_updates
+    await self._post(
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/_bot.py", line 622, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/_bot.py", line 651, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 342, in _request_wrapper
+    raise exc
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 332, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cristhiamdaniel/TareasYa/.venv/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 300, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
+2024-09-23 14:20:53,975 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:21:04,160 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:21:14,346 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:21:24,536 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:21:34,720 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:21:44,922 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:21:55,141 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:22:05,350 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:22:15,566 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:22:25,759 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:22:35,945 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:22:46,134 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:22:56,317 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:23:06,502 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:23:16,691 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:23:26,890 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:23:37,078 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:23:47,302 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:23:48,143 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:23:48,147 - bot.checklist - INFO - Comando /init ejecutado
+2024-09-23 14:23:48,147 - bot.checklist - INFO - Usuarios cargados desde el archivo JSON
+2024-09-23 14:23:48,148 - bot.checklist - INFO - Usuario 1007789859 ya estaba registrado.
+2024-09-23 14:23:49,261 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:23:55,619 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:23:56,325 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:23:56,327 - bot.checklist - INFO - Comando /list ejecutado. Estado actual:
+Checklist:
+1: ❌ comparendo daniel
+5: ❌ notas javeriana consolidado
+6: ❌ coopebis formato
+7: ❌ auto cotizar americana
+9: ❌ desinfectar cascos
+13: ❌ Buscar carnet javeriana
+17: ❌ actualizar teléfono conjunto
+23: ❌ bajar zapatillas altillo
+28: ❌ psicóloga martes 17
+29: ❌ cuadrar clases futbol Nico
+30: ❌ botas alza
+32: ❌ cambiar visor moto
+33: ❌ Arreglar ropa cajas
+34: ❌ arreglar maleta nico
+35: ❌ seleccionar juguetes nico
+36: ❌ Inscripcion natacion compensar
+37: ❌ clase libre natacion
+38: ❌ parciales enviar a giset
+39: ❌ clases jave semana 1 y 2
+40: ❌ videos powerbi
+41: ❌ contactar a camilo contrato
+42: ❌ 200 dolares mexico primera cuota
+43: ❌ recoger cobija lavanderia
+44: ❌ cotizar llantas moto
+45: ❌ cotizar tapiceria skoda
+46: ❌ cotizar pantalla trasera, tablet y rines para skoda
+47: ❌ reclamar bono ktronik alkosto
+48: ❌ programar terapia de plasma
+49: ❌ Listado de casas aptos de finca raiz
+50: ❌ organizar actividades camara de comercio
+51: ❌ programar actividades terapia pie
+52: ❌ buscar locales jardin
+53: ❌ descongelar nevera
+54: ❌ obtener excel finanzas
+55: ❌ organizar recibos
+56: ❌ tinta impresora
+57: ❌ impresora 3d
+58: ❌ pagar Novaventa tia Sandra
+59: ❌ comprar pitaya y papaya
+
+2024-09-23 14:24:05,847 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:24:16,077 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:24:26,263 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:24:35,062 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:24:35,753 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:24:35,756 - bot.checklist - INFO - Tarea 'Buscar carnet javeriana' marcada como completada con identificador 13
+2024-09-23 14:24:35,759 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:24:45,248 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:24:48,020 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:24:48,689 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:24:48,691 - bot.checklist - INFO - Tarea 'psicóloga martes 17' marcada como completada con identificador 28
+2024-09-23 14:24:48,693 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:24:56,673 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:24:57,364 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:24:57,366 - bot.checklist - INFO - Tarea 'cuadrar clases futbol Nico' marcada como completada con identificador 29
+2024-09-23 14:24:57,368 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:25:06,877 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:25:17,073 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:25:27,260 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:25:35,346 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:25:36,079 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:25:36,081 - bot.checklist - INFO - Tarea 'Arreglar ropa cajas' marcada como completada con identificador 33
+2024-09-23 14:25:36,083 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:25:45,587 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:25:46,759 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:25:47,487 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:25:47,489 - bot.checklist - INFO - Tarea 'seleccionar juguetes nico' marcada como completada con identificador 35
+2024-09-23 14:25:47,491 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:25:55,822 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:25:56,573 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:25:56,576 - bot.checklist - INFO - Tarea 'clase libre natacion' marcada como completada con identificador 37
+2024-09-23 14:25:56,579 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:26:03,201 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:26:03,936 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:26:03,938 - bot.checklist - INFO - Tarea 'parciales enviar a giset' marcada como completada con identificador 38
+2024-09-23 14:26:03,940 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:26:13,421 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:26:23,605 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:26:30,294 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:26:31,088 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:26:31,090 - bot.checklist - INFO - Tarea '200 dolares mexico primera cuota' marcada como completada con identificador 42
+2024-09-23 14:26:31,092 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:26:40,476 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:26:50,679 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:27:00,875 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:27:11,059 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:27:21,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:27:31,433 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:27:33,106 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:27:33,804 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:27:33,807 - bot.checklist - INFO - Tarea 'programar actividades terapia pie' marcada como completada con identificador 51
+2024-09-23 14:27:33,809 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:27:36,484 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:27:36,843 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:27:36,845 - bot.checklist - INFO - Tarea 'descongelar nevera' marcada como completada con identificador 53
+2024-09-23 14:27:36,847 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:27:44,498 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:27:45,204 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:27:45,208 - bot.checklist - INFO - Tarea 'obtener excel finanzas' marcada como completada con identificador 54
+2024-09-23 14:27:45,211 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:27:54,684 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:27:57,545 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:27:58,231 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:27:58,233 - bot.checklist - INFO - Tarea 'organizar recibos' marcada como completada con identificador 55
+2024-09-23 14:27:58,235 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:28:00,924 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:28:01,278 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:28:01,280 - bot.checklist - INFO - Tarea 'pagar Novaventa tia Sandra' marcada como completada con identificador 58
+2024-09-23 14:28:01,282 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:28:03,435 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:28:03,759 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:28:03,762 - bot.checklist - INFO - Tarea 'comprar pitaya y papaya' marcada como completada con identificador 59
+2024-09-23 14:28:03,766 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:28:06,572 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:28:06,575 - bot.checklist - INFO - Comando /init ejecutado
+2024-09-23 14:28:06,576 - bot.checklist - INFO - Usuarios cargados desde el archivo JSON
+2024-09-23 14:28:06,576 - bot.checklist - INFO - Usuario 1007789859 ya estaba registrado.
+2024-09-23 14:28:06,918 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:28:12,986 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:28:13,691 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:28:13,693 - bot.checklist - WARNING - Eliminación de tareas completadas no confirmada.
+2024-09-23 14:28:17,992 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:28:17,996 - bot.checklist - INFO - Checklist guardado en el archivo JSON
+2024-09-23 14:28:17,997 - bot.checklist - INFO - Tareas completadas eliminadas del checklist
+2024-09-23 14:28:18,311 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:28:18,313 - bot.checklist - INFO - Comando /delete ejecutado. Tareas completadas eliminadas.
+2024-09-23 14:28:21,309 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:28:21,635 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:28:21,637 - bot.checklist - INFO - Comando /list ejecutado. Estado actual:
+Checklist:
+1: ❌ comparendo daniel
+5: ❌ notas javeriana consolidado
+6: ❌ coopebis formato
+7: ❌ auto cotizar americana
+9: ❌ desinfectar cascos
+17: ❌ actualizar teléfono conjunto
+23: ❌ bajar zapatillas altillo
+30: ❌ botas alza
+32: ❌ cambiar visor moto
+34: ❌ arreglar maleta nico
+36: ❌ Inscripcion natacion compensar
+39: ❌ clases jave semana 1 y 2
+40: ❌ videos powerbi
+41: ❌ contactar a camilo contrato
+43: ❌ recoger cobija lavanderia
+44: ❌ cotizar llantas moto
+45: ❌ cotizar tapiceria skoda
+46: ❌ cotizar pantalla trasera, tablet y rines para skoda
+47: ❌ reclamar bono ktronik alkosto
+48: ❌ programar terapia de plasma
+49: ❌ Listado de casas aptos de finca raiz
+50: ❌ organizar actividades camara de comercio
+52: ❌ buscar locales jardin
+56: ❌ tinta impresora
+57: ❌ impresora 3d
+
+2024-09-23 14:28:31,504 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:28:41,693 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:28:51,896 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:29:02,088 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:29:12,273 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:29:22,458 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:29:32,646 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:29:42,835 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:29:53,021 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:30:03,206 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:30:13,393 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:30:23,574 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:30:33,783 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:30:43,991 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:30:54,182 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:31:04,386 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:31:14,570 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:31:24,753 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:31:34,974 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:31:45,163 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:31:55,351 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:32:05,537 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:32:15,726 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:32:25,913 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:32:36,097 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:32:46,282 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:32:56,470 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:33:06,667 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:33:16,874 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:33:27,068 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:33:37,252 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:33:47,468 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:33:57,655 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:34:07,857 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:34:18,041 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:34:28,236 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:34:38,420 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:34:48,608 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:34:58,794 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
