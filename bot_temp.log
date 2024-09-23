@@ -1,10 +1,96 @@
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/usuario/PycharmProjects/TareasYa/bot/main.py", line 3, in <module>
-    from bot.handlers import setup_handlers
-  File "/home/usuario/PycharmProjects/TareasYa/bot/handlers.py", line 2, in <module>
-    from bot.checklist import start, add_task, mark_task, unmark_task, get_checklist, set_priority, show_eisenhower, \
-  File "/home/usuario/PycharmProjects/TareasYa/bot/checklist.py", line 6, in <module>
-    from web.generate_html import generate_html, save_html_file
-ImportError: cannot import name 'save_html_file' from 'web.generate_html' (/home/usuario/PycharmProjects/TareasYa/web/generate_html.py)
+2024-09-23 14:43:30,153 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:43:30,154 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:43:30,154 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:43:30,154 - root - INFO - Recordatorios programados a las 10:00 AM, 3:00 PM y 8:00 PM hora de Colombia
+2024-09-23 14:43:30,154 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:43:30,154 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:43:30,154 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-09-23 14:43:30,154 - root - INFO - Recordatorios programados a las 10:00 AM, 3:00 PM y 8:00 PM hora de Colombia
+2024-09-23 14:43:30,155 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:43:30,155 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:43:30,155 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:43:30,156 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:43:30,156 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:43:30,156 - apscheduler.scheduler - INFO - Added job "send_reminders" to job store "default"
+2024-09-23 14:43:30,156 - apscheduler.scheduler - INFO - Scheduler started
+2024-09-23 14:43:30,156 - __main__ - INFO - Scheduler iniciado
+2024-09-23 14:43:30,156 - __main__ - INFO - Bot iniciado
+2024-09-23 14:43:30,755 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getMe "HTTP/1.1 200 OK"
+2024-09-23 14:43:30,947 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/deleteWebhook "HTTP/1.1 200 OK"
+2024-09-23 14:43:30,950 - apscheduler.scheduler - INFO - Scheduler started
+2024-09-23 14:43:30,950 - telegram.ext.Application - INFO - Application started
+2024-09-23 14:43:31,569 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:43:31,902 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:43:31,904 - bot.checklist - INFO - Comando /list ejecutado. Estado actual:
+Checklist:
+1: ❌ comparendo daniel
+5: ❌ notas javeriana consolidado
+6: ❌ coopebis formato
+7: ❌ auto cotizar americana
+9: ❌ desinfectar cascos
+17: ❌ actualizar teléfono conjunto
+23: ❌ bajar zapatillas altillo
+30: ❌ botas alza
+32: ❌ cambiar visor moto
+34: ❌ arreglar maleta nico
+36: ❌ Inscripcion natacion compensar
+39: ❌ clases jave semana 1 y 2
+40: ❌ videos powerbi
+41: ❌ contactar a camilo contrato
+43: ❌ recoger cobija lavanderia
+44: ❌ cotizar llantas moto
+45: ❌ cotizar tapiceria skoda
+46: ❌ cotizar pantalla trasera, tablet y rines para skoda
+47: ❌ reclamar bono ktronik alkosto
+48: ❌ programar terapia de plasma
+49: ❌ Listado de casas aptos de finca raiz
+50: ❌ organizar actividades camara de comercio
+52: ❌ buscar locales jardin
+56: ❌ tinta impresora
+57: ❌ impresora 3d
+
+2024-09-23 14:43:31,905 - bot.checklist - INFO - Comando /init ejecutado
+2024-09-23 14:43:31,905 - bot.checklist - INFO - Usuarios cargados desde el archivo JSON
+2024-09-23 14:43:31,905 - bot.checklist - INFO - Usuario 1007789859 ya estaba registrado.
+2024-09-23 14:43:32,575 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:43:35,784 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:43:36,142 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:43:36,144 - bot.checklist - INFO - Comando /list ejecutado. Estado actual:
+Checklist:
+1: ❌ comparendo daniel
+5: ❌ notas javeriana consolidado
+6: ❌ coopebis formato
+7: ❌ auto cotizar americana
+9: ❌ desinfectar cascos
+17: ❌ actualizar teléfono conjunto
+23: ❌ bajar zapatillas altillo
+30: ❌ botas alza
+32: ❌ cambiar visor moto
+34: ❌ arreglar maleta nico
+36: ❌ Inscripcion natacion compensar
+39: ❌ clases jave semana 1 y 2
+40: ❌ videos powerbi
+41: ❌ contactar a camilo contrato
+43: ❌ recoger cobija lavanderia
+44: ❌ cotizar llantas moto
+45: ❌ cotizar tapiceria skoda
+46: ❌ cotizar pantalla trasera, tablet y rines para skoda
+47: ❌ reclamar bono ktronik alkosto
+48: ❌ programar terapia de plasma
+49: ❌ Listado de casas aptos de finca raiz
+50: ❌ organizar actividades camara de comercio
+52: ❌ buscar locales jardin
+56: ❌ tinta impresora
+57: ❌ impresora 3d
+
+2024-09-23 14:43:44,128 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:43:44,906 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/sendMessage "HTTP/1.1 200 OK"
+2024-09-23 14:43:44,908 - bot.checklist - INFO - Comando /eisn ejecutado. Matriz de Eisenhower generada.
+2024-09-23 14:43:54,337 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:44:04,539 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:44:14,748 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:44:24,955 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:44:35,162 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:44:45,364 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+2024-09-23 14:44:55,567 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7533630947:AAGdKPvSEQR9gMGeE4miOTbcTfIXmIxmJQI/getUpdates "HTTP/1.1 200 OK"
+
