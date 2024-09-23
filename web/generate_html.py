@@ -141,90 +141,7 @@
 # #
 #
 #
-# # web/generate_html.py
-#
-# def generate_html(matrix):
-#     html_content = """
-#     <!DOCTYPE html>
-#     <html lang="es">
-#     <head>
-#         <meta charset="UTF-8">
-#         <title> Matriz de Eisenhower</title>
-#         <style>
-#             body {{
-#                 font-family: Arial, sans-serif;
-#                 background-color: #f4f4f9;
-#                 color: #333;
-#             }}
-#             table {{
-#                 width: 100%;
-#                 border-collapse: collapse;
-#                 margin-top: 20px;
-#             }}
-#             th, td {{
-#                 border: 1px solid #ddd;
-#                 padding: 12px;
-#                 text-align: center;
-#             }}
-#             th {{
-#                 background-color: #4CAF50;
-#                 color: white;
-#             }}
-#             tr:nth-child(even) {{
-#                 background-color: #f2f2f2;
-#             }}
-#             tr:hover {{
-#                 background-color: #ddd;
-#             }}
-#             ul {{
-#                 list-style: none;
-#                 padding: 0;
-#             }}
-#             li::before {{
-#                 content: "• ";
-#                 color: #4CAF50;
-#                 font-weight: bold;
-#             }}
-#         </style>
-#     </head>
-#     <body>
-#         <h1>Matriz de Eisenhower</h1>
-#         <table>
-#             <tr>
-#                 <th>Urgente e Importante</th>
-#                 <th>No Urgente pero Importante</th>
-#             </tr>
-#             <tr>
-#                 <td>{0}</td>
-#                 <td>{1}</td>
-#             </tr>
-#             <tr>
-#                 <th>Urgente pero No Importante</th>
-#                 <th>No Urgente y No Importante</th>
-#             </tr>
-#             <tr>
-#                 <td>{2}</td>
-#                 <td>{3}</td>
-#             </tr>
-#         </table>
-#     </body>
-#     </html>
-#     """
-#
-#     def format_tasks(tasks):
-#         if not tasks:
-#             return "No hay tareas en esta categoría."
-#         return "<ul>" + "".join([f"<li>{'✅' if completed else '❌'} {task}</li>" for _, task, completed in tasks]) + "</ul>"
-#
-#     categories = ["Urgente e Importante", "No Urgente pero Importante", "Urgente pero No Importante", "No Urgente y No Importante"]
-#     formatted_tasks = [format_tasks(matrix[category]) for category in categories]
-#
-#     return html_content.format(*formatted_tasks)
-#
-# def save_html_file(content, path):
-#     with open(path, 'w') as file:
-#         file.write(content)
-#
+# web/generate_html.py
 
 def generate_html(matrix):
     html_content = """
@@ -232,7 +149,7 @@ def generate_html(matrix):
     <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Matriz de Eisenhower</title>
+        <title> Matriz de Eisenhower</title>
         <style>
             body {{
                 font-family: Arial, sans-serif;
@@ -248,11 +165,16 @@ def generate_html(matrix):
                 border: 1px solid #ddd;
                 padding: 12px;
                 text-align: center;
-                vertical-align: top;
             }}
             th {{
                 background-color: #4CAF50;
                 color: white;
+            }}
+            tr:nth-child(even) {{
+                background-color: #f2f2f2;
+            }}
+            tr:hover {{
+                background-color: #ddd;
             }}
             ul {{
                 list-style: none;
@@ -263,48 +185,7 @@ def generate_html(matrix):
                 color: #4CAF50;
                 font-weight: bold;
             }}
-            li {{
-                padding: 10px;
-                background-color: white;
-                margin: 5px;
-                border: 1px solid #ddd;
-                cursor: move;
-            }}
-            li.dragging {{
-                opacity: 0.5;
-            }}
         </style>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {{
-                let draggedItem = null;
-
-                document.querySelectorAll('li').forEach(item => {{
-                    item.addEventListener('dragstart', function(e) {{
-                        draggedItem = this;
-                        e.dataTransfer.setData('text/html', this.innerHTML);
-                        this.classList.add('dragging');
-                    }});
-
-                    item.addEventListener('dragend', function() {{
-                        this.classList.remove('dragging');
-                    }});
-                }});
-
-                document.querySelectorAll('td').forEach(category => {{
-                    category.addEventListener('dragover', function(e) {{
-                        e.preventDefault();
-                    }});
-
-                    category.addEventListener('drop', function(e) {{
-                        if (draggedItem) {{
-                            this.querySelector('ul').appendChild(draggedItem);
-                            draggedItem = null;
-                            // Aquí puedes enviar la actualización al backend para guardar el nuevo estado
-                        }}
-                    }});
-                }});
-            }});
-        </script>
     </head>
     <body>
         <h1>Matriz de Eisenhower</h1>
@@ -314,24 +195,16 @@ def generate_html(matrix):
                 <th>No Urgente pero Importante</th>
             </tr>
             <tr>
-                <td ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <ul id="urgent-important">{0}</ul>
-                </td>
-                <td ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <ul id="not-urgent-important">{1}</ul>
-                </td>
+                <td>{0}</td>
+                <td>{1}</td>
             </tr>
             <tr>
                 <th>Urgente pero No Importante</th>
                 <th>No Urgente y No Importante</th>
             </tr>
             <tr>
-                <td ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <ul id="urgent-not-important">{2}</ul>
-                </td>
-                <td ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <ul id="not-urgent-not-important">{3}</ul>
-                </td>
+                <td>{2}</td>
+                <td>{3}</td>
             </tr>
         </table>
     </body>
@@ -341,9 +214,16 @@ def generate_html(matrix):
     def format_tasks(tasks):
         if not tasks:
             return "No hay tareas en esta categoría."
-        return "".join([f"<li draggable='true'>{'✅' if completed else '❌'} {task}</li>" for _, task, completed in tasks])
+        return "<ul>" + "".join([f"<li>{'✅' if completed else '❌'} {task}</li>" for _, task, completed in tasks]) + "</ul>"
 
     categories = ["Urgente e Importante", "No Urgente pero Importante", "Urgente pero No Importante", "No Urgente y No Importante"]
     formatted_tasks = [format_tasks(matrix[category]) for category in categories]
 
     return html_content.format(*formatted_tasks)
+
+def save_html_file(content, path):
+    with open(path, 'w') as file:
+        file.write(content)
+
+
+
